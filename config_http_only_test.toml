@@ -1,0 +1,18 @@
+# Sanitized HTTP-only transport test for Codex.
+# This file intentionally excludes machine-specific paths, project names,
+# MCP command paths, desktop preferences, and any authentication material.
+#
+# IMPORTANT:
+# - This is a minimal test config, not a full replacement for your existing config.toml.
+# - Back up your existing config.toml before testing.
+# - The ChatGPT backend URL below is an experimental setting and may change.
+# - If Codex fails to start or authenticate, restore your original config.
+
+model_provider = "openai_http"
+
+[model_providers.openai_http]
+name = "OpenAI HTTP (test)"
+base_url = "https://chatgpt.com/backend-api/codex"
+wire_api = "responses"
+requires_openai_auth = true
+supports_websockets = false
